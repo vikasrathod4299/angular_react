@@ -1,0 +1,8 @@
+<div>
+  <h1>Find greater of two numbers.</h1>
+  <input type="number" [(ngModel)]="num1" placeholder="ccc">
+  <input type="number" [(ngModel)]="num2" placeholder="Number 2">
+  <div *ngIf="num1> num2"> <h1> Number 1 one is greater than Number 2 </h1></div>
+  <div *ngIf="num1<num2"> <h1> Number 2 two is greater than Number 1 </h1></div>
+  <div *ngIf="num1==num2"> <h1> Both number are same </h1></div>
+</div>

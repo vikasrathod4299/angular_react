@@ -1,0 +1,17 @@
+<div>
+    <p class="m-5 px-5 fs-3 text-end" (click)="handleLikeToggle()">{{likedPosts.length}} ❤️</p>
+    <div >
+        <div *ngIf="likeToggle; else elseBlock"  class="container d-flex flex-wrap justify-content-around mt-5">
+            <div  *ngFor="let post of postList">
+                <app-post-list [post]="post" (likedPosts)="addLikedPosts($event)"></app-post-list>
+            </div>    
+        </div>
+        <ng-template #elseBlock>
+            <div class="container d-flex flex-wrap justify-content-around mt-5">
+                <div *ngFor="let post of likedPosts">
+                    <app-post-list [post]="post" (likedPosts)="addLikedPosts($event)"></app-post-list>
+                </div>
+            </div>
+        </ng-template>    
+    </div>
+</div>

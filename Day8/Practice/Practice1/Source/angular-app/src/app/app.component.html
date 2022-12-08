@@ -1,0 +1,28 @@
+<form [formGroup]="this.Names" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" formControlName="firstName" >
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastname" formControlName="lastName" >
+  </div>
+  <div>
+    <input type="radio" name="gender" value="male" formControlName="gender"> Male
+    <input type="radio" name="gender" value="female" formControlName="gender"> Female 
+  </div>
+  <div formGroupName ="address">
+    <div>
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city" >
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" formControlName="state" >
+    </div>
+  </div>
+  <div>
+    <button type="submit" [disabled]="!Names.valid">Submit</button>
+  </div>
+</form>
+<p>{{Names.value | json}}</p> 

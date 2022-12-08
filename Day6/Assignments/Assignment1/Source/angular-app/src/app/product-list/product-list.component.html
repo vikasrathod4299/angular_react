@@ -1,0 +1,7 @@
+<input type="name" [(ngModel)]="prod.name" placeholder="name"/>
+<input type="quantity" [(ngModel)]="prod.quantity" placeholder="quantity"/>
+<input type="price" [(ngModel)]="prod.price" placeholder="price"/>
+<button (click)="onSubmit()">Submit</button>
+<div *ngFor="let prod of list">
+    <app-product [prod]="prod"></app-product>
+</div>

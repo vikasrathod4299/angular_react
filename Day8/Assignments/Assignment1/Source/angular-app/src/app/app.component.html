@@ -1,0 +1,177 @@
+<div>
+  <div class="container">
+    <form [formGroup]="form" class="d-flex justify-content-between" (ngSubmit)="onSubmit()">
+        <div formGroupName="student" id="student">
+          <h3>Student Details :-</h3>
+            <div formGroupName = 'Name'>
+                <div class="form-group my-3">
+                  <label for="firstName">First Name:-</label>
+                  <input formControlName="firstName" class="form-control" type="text" id="firstName" name="firstName" placeholder="Enter Firstname">
+                  <app-errors [field]="studFname"></app-errors>
+                </div>
+                <div class="form-group my-3">
+                  <label for="middleName">Middle Name:-</label>
+                  <input formControlName="middleName" class="form-control" type="text" id="middleName" name="middleName" placeholder="Enter Middlename">
+                </div>
+                <app-errors [field]="studMname"></app-errors>
+                <div class="form-group my-3">
+                  <label for="lastName">Last Name:-</label>
+                  <input formControlName="lastName" class="form-control" type="text" id="lastName" name="lastName" placeholder="Enter Lastname">
+                </div>
+                <app-errors [field]="studLname"></app-errors>
+            </div>
+
+            <div formGroupName = 'personalDetails'>
+              <div class="form-group my-3">
+                <label for="dob">DOB:-</label>
+                <input formControlName="dob" class="form-control" type="date" id="dob" name="dob">
+                <app-errors [field]="studDate"></app-errors>
+              </div>
+              <div class="form-group my-3">
+                <label for="birthPlace">Birth Place:-</label>
+                <input formControlName="birthPlace" class="form-control" type="text" id="birthPlace" name="birthPlace" placeholder="Enter Birth Place">
+                <app-errors [field]="studBirthPlace"></app-errors>
+              </div>
+              <div class="form-group my-3">
+                <label for="firstLang">First Language:-</label>
+                <input formControlName="firstLang" class="form-control" type="text" id="firstLang" name="firstLang" placeholder="Enter First Language">
+                <app-errors [field]="studFirstLang"></app-errors>
+              </div>
+            </div>
+
+            <div formGroupName="adress">
+              <div class="form-group my-3">
+                <label for="city">City:-</label>
+                <input formControlName="city" class="form-control" type="text" id="city" name="city" placeholder="Enter Your City">
+                <app-errors [field]="studCity"></app-errors>
+              </div>
+              <div class="form-group my-3">
+                <label for="State">State:-</label>
+                <input formControlName="state" class="form-control" type="text" id="State" name="State" placeholder="Enter Your State">
+                <app-errors [field]="studState"></app-errors>
+              </div>              
+              <div class="form-group my-3">
+                <label for="pin">Enter Pin Code:-</label>
+                <input formControlName="pinCode" class="form-control" type="text" id="pin" name="pin" placeholder="Pincode">
+                <app-errors [field]="studPincode"></app-errors>
+              </div>
+            </div>
+        </div>
+        <div id="father" formGroupName="father">
+          <h3>Father's Details :-</h3>
+          <div formGroupName="Name">
+              <div class="form-group my-3">
+                <label for="firstName">First Name:-</label>
+                <input formControlName="firstName" class="form-control" type="text" id="firstName" name="firstName" placeholder="Enter Firstname">
+                <app-errors [field]="fatherFname"></app-errors>
+              </div>
+              <div class="form-group my-3">
+                <label for="middleName">Middle Name:-</label>
+                <input formControlName="middleName" class="form-control" type="text" id="middleName" name="middleName" placeholder="Enter Middlename">
+                <app-errors [field]="fatherMname"></app-errors>
+              </div>
+              <div class="form-group my-3">
+                <label for="lastName">Last Name:-</label>
+                <input formControlName="lastName" class="form-control" type="text" id="lastName" name="lastName" placeholder="Enter Lastname">
+                <app-errors [field]="fatherLname"></app-errors>
+              </div>
+          </div>
+          <div class="form-group my-3">
+            <label for="email">Email :-</label>
+            <input formControlName="email" class="form-control" type="email" id="email" name="email" placeholder="Enter Email">
+            <app-errors [field]="fatherEmail"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="education">Education Qualification:-</label>
+            <input formControlName="education" class="form-control" type="text" id="education" name="education" placeholder="Enter Education">
+            <app-errors [field]="fatherEducation"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="profession">Profession:-</label>
+            <input formControlName="profession" class="form-control" type="text" id="profession" name="profession" placeholder="Enter Profession">
+            <app-errors [field]="fatherProfession"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="designation">Designation:-</label>
+            <input formControlName="desgnation" class="form-control" type="text" id="designation" name="designation" placeholder="Enter Designation">
+            <app-errors [field]="fatherDesgnation"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="moblie">Moblie Number:-</label>
+            <input formControlName="mobile" class="form-control" type="text" id="moblie" name="moblie" placeholder="Enter Mobile Number">
+            <app-errors [field]="fatherMobile"></app-errors>
+          </div>             
+        </div>  
+        <div formGroupName="mother" id="mother">
+          <h3>Mother's Details :-</h3>
+          <div formGroupName="Name">
+            <div class="form-group my-3">
+              <label for="firstName">First Name:-</label>
+              <input formControlName="firstName" class="form-control" type="text" id="firstName" name="firstName" placeholder="Enter Firstname">
+              <app-errors [field]="motherFname"></app-errors>
+            </div>
+            <div class="form-group my-3">
+              <label for="middleName">Middle Name:-</label>
+              <input formControlName="middleName" class="form-control" type="text" id="middleName" name="middleName" placeholder="Enter Middlename">
+              <app-errors [field]="motherMname"></app-errors>
+            </div>
+            <div class="form-group my-3">
+              <label for="lastName">Last Name:-</label>
+              <input formControlName="lastName" class="form-control" type="text" id="lastName" name="lastName" placeholder="Enter Lastname">
+              <app-errors [field]="motherLname"></app-errors>
+            </div>
+         </div>
+          <div class="form-group my-3">
+            <label for="email">Email :-</label>
+            <input formControlName="email" class="form-control" type="email" id="email" name="email" placeholder="Enter Email">
+            <app-errors [field]="motherEmail"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="education">Education Qualification:-</label>
+            <input formControlName="education" class="form-control" type="text" id="education" name="education" placeholder="Enter Education">
+            <app-errors [field]="motherEducation"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="profession">Profession:-</label>
+            <input formControlName="profession" class="form-control" type="text" id="profession" name="profession" placeholder="Enter Profession">
+            <app-errors [field]="motherProfession"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="designation">Designation:-</label>
+            <input formControlName="desgnation" class="form-control" type="text" id="designation" name="designation" placeholder="Enter Designation">
+            <app-errors [field]="motherDesgnation"></app-errors>
+          </div>
+          <div class="form-group my-3">
+            <label for="moblie">Moblie Number:-</label>
+            <input formControlName="mobile" class="form-control" type="text" id="moblie" name="moblie" placeholder="Enter Mobile Number">
+            <app-errors [field]="motherMobile"></app-errors>
+          </div>      
+        </div>
+
+        <div formGroupName="EmergencyList">
+          <h4>Emergency contect :-</h4>
+          <div formArrayName="emeList">
+            <div *ngFor="let item of emeList.controls; let i = index" class="form-group my-3">
+              <div [formGroupName]="i">
+                <div>
+                  <label for="designation">Name:-</label>
+                  <input formControlName="name" class="form-control" type="text" id="name" name="name" placeholder="Enter Name">                      
+                </div>
+                <div>
+                  <label for="designation">Number:-</label>
+                  <input formControlName="number" class="form-control" type="text" id="number" name="number" placeholder="Enter Number">  
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div>
+            <button type="button" class="btn btn-warning" (click)="addEme()">Add person</button>
+            <button type="button" class="btn btn-danger" (click)="removeEme()">Remove person</button>
+
+          </div>
+        </div>
+      </form>
+      <input type="submit" value="Submit" (click)="onSubmit()">
+  </div>
+</div>
+{{form.value | json}}

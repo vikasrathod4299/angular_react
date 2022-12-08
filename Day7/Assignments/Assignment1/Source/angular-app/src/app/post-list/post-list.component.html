@@ -1,0 +1,10 @@
+  <div class="card shadow-lg" style="width: 18rem;">
+    <img class="card-img-top w-75 mx-auto rounded shadow mt-3"  src='{{post.img}}' alt="Card image cap">
+    <div class="card-body">
+      <h3 class="card-title">{{post.name}}</h3>
+      <p class="card-text">{{post.disc}}</p>
+      <div class="d-flex justify-content-end me-4" (click)="addLike()">
+        <em class="{{post.likeClass}}"></em>
+      </div>
+    </div>
+    </div>
